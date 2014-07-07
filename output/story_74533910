@@ -1,0 +1,15 @@
+exercisedb=# SELECT MAX(amount) FROM orders GROUP BY customer_id ORDER BY customer_id ASC
+exercisedb-# ;
+  max  
+-------
+ 55.97
+   5.4
+ 97.11
+ 84.81
+ 81.47
+ 73.06
+  91.7
+  99.0
+ 31.45
+ 81.17
+(10 rows)
