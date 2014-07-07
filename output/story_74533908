@@ -1,0 +1,14 @@
+exercisedb=# SELECT MIN(amount) FROM orders GROUP BY customer_id ORDER BY customer_id ASC;
+  min  
+-------
+  5.67
+  1.69
+  50.1
+  4.81
+ 52.57
+ 29.74
+ 11.16
+ 31.07
+ 13.33
+  3.05
+(10 rows)
