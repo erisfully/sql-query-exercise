@@ -1,0 +1,50 @@
+exercisedb=# SELECT items.id, customers.name
+exercisedb-# FROM orderitems
+exercisedb-# LEFT JOIN orders ON orderitems.order_id = orders.id
+exercisedb-# LEFT JOIN customers ON orders.customer_id = customers.id
+exercisedb-# INNER JOIN items ON orderitems.item_id = items.id
+exercisedb-# WHERE items.id = '8';
+ id |         name         
+----+----------------------
+  8 | Elta Dicki
+  8 | Edna Hintz
+  8 | Evert Pfeffer
+  8 | Ms. Sofia Rowe
+  8 | Donato Rempel
+  8 | Zelma Davis
+  8 | Ms. Sofia Rowe
+  8 | Hulda Will III
+  8 | Edna Hintz
+  8 | Hulda Will III
+  8 | Evert Pfeffer
+  8 | Ms. Sofia Rowe
+  8 | Elta Dicki
+  8 | Evert Pfeffer
+  8 | Elta Dicki
+  8 | Coleman Prohaska Jr.
+  8 | Coleman Prohaska Jr.
+  8 | Elta Dicki
+(18 rows)
+
+
+---> OR <----
+
+exercisedb=# SELECT items.id, customers.name
+exercisedb-# FROM orderitems
+exercisedb-# LEFT JOIN orders ON orderitems.order_id = orders.id
+exercisedb-# LEFT JOIN customers ON orders.customer_id = customers.id
+exercisedb-# INNER JOIN items ON orderitems.item_id = items.id
+exercisedb-# WHERE items.id = '8'
+exercisedb-# GROUP BY items.id, customers.name;
+ id |         name         
+----+----------------------
+  8 | Zelma Davis
+  8 | Hulda Will III
+  8 | Donato Rempel
+  8 | Ms. Sofia Rowe
+  8 | Edna Hintz
+  8 | Coleman Prohaska Jr.
+  8 | Elta Dicki
+  8 | Evert Pfeffer
+(8 rows)
+
