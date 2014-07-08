@@ -1,0 +1,19 @@
+exercisedb=# SELECT name, customers.id, ROUND(AVG(amount),2) 
+exercisedb-# FROM customers
+exercisedb-# INNER JOIN orders
+exercisedb-# ON customers.id = orders.customer_id
+exercisedb-# GROUP BY customers.id;
+         name         | id | round 
+----------------------+----+-------
+ Coleman Prohaska Jr. |  8 | 57.94
+ Hulda Will III       | 10 | 44.79
+ Zelma Davis          |  6 | 44.81
+ Tyrell Von DDS       |  2 |  3.55
+ Evert Pfeffer        |  4 | 41.06
+ Donato Rempel        |  1 | 31.21
+ Elta Dicki           |  5 | 62.72
+ Ms. Sofia Rowe       |  3 | 77.51
+ Wilhelmine Huels     |  9 | 22.39
+ Edna Hintz           |  7 | 65.50
+(10 rows)
+
