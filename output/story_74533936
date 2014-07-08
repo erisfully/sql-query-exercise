@@ -1,0 +1,26 @@
+exercisedb=# SELECT items.id, orders.customer_id
+exercisedb-# FROM orderitems
+exercisedb-# LEFT JOIN orders ON orderitems.order_id = orders.id
+exercisedb-# INNER JOIN items ON orderitems.item_id = items.id
+exercisedb-# WHERE items.id = '8';
+ id | customer_id 
+----+-------------
+  8 |           5
+  8 |           7
+  8 |           4
+  8 |           3
+  8 |           1
+  8 |           6
+  8 |           3
+  8 |          10
+  8 |           7
+  8 |          10
+  8 |           4
+  8 |           3
+  8 |           5
+  8 |           4
+  8 |           5
+  8 |           8
+  8 |           8
+  8 |           5
+(18 rows)

@@ -1,0 +1,12 @@
+exercisedb=# SELECT items.id, customers.name, SUM(orders.amount)
+exercisedb-# FROM orderitems
+exercisedb-# LEFT JOIN orders ON orderitems.order_id = orders.id
+exercisedb-# LEFT JOIN customers ON orders.customer_id = customers.id
+exercisedb-# INNER JOIN items ON orderitems.item_id = items.id
+exercisedb-# WHERE items.id = '8' AND customers.name = 'Evert Pfeffer' 
+exercisedb-# GROUP BY items.id, customers.name
+exercisedb-# ;
+ id |     name      |  sum   
+----+---------------+--------
+  8 | Evert Pfeffer | 147.85
+(1 row)
