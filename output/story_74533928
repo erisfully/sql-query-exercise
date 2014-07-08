@@ -1,0 +1,10 @@
+xercisedb=# SELECT name, GROUP BY customer_id, SUM(amount)
+
+exercisedb-# FROM customers
+
+exercisedb-# INNER JOIN orders
+
+exercisedb-# ON customers.id = orders.customer_id
+
+exercisedb-# ORDER BY customers.name ASC;
+
